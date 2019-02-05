@@ -1,4 +1,5 @@
 extern crate rand;
+
 // We add a line that lets Rust know we'll be using the rand crate as external dependency.
 use std::io;
 use std::cmp::Ordering;
@@ -12,10 +13,10 @@ fn main() {
     println!("The secret number is: {}", secret_number);
     loop {
         println!("Please input your guess.");
-        let mut guess= String::new();
+        let mut guess = String::new();
         io::stdin().read_line(&mut guess).expect("Failed to read line");
-        let guess:u32 = match guess.trim().parse(){
-            Ok(num) =>num,
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
             Err(_) => continue,
         };
         println!("You guessed: {}", guess);
