@@ -5,4 +5,5 @@ authors = ["zhouteng <wwwsousoucom@126.com>"]
 edition = "2018"
 
 [dependencies]
-rand = "0.4.0"
+rand = "*"
+piston_window = "*"
