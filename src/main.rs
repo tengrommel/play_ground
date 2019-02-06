@@ -7,6 +7,13 @@ use rand::Rng;
 // The Rng trait defines methods that random number generators implement,
 // and this trait must be in scope for us to use those method
 
+#[derive(Debug)]
+enum Example {
+    Float(f64),
+    Int(i32),
+    Text(String),
+}
+
 fn main() {
     println!("Guess the number!");
     let secret_number = rand::thread_rng().gen_range(1, 101);
@@ -29,5 +36,22 @@ fn main() {
             }
         }
     }
+    let mut v = Vec::new();
+    v.push(5);
+    v.push(6);
+    v.push(7);
+    v.push(8);
+    for i in &v {
+        println!("{}", i)
+    }
+    println!("{:?} {} {}", &v, v.len(), v.capacity());
+    println!("{:?}", v.pop());
+
+    let r = vec![
+        Example::Int(142),
+        Example::Float(12.32),
+        Example::Text(String::from("string")),
+    ];
+    println!("{:?}", &r);
 }
 
