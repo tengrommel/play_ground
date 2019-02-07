@@ -93,3 +93,24 @@ None of the ownership features slow down your program while it's running.
     }
 
 # Snake Game
+
+# USING MODULES TO REUSE AND ORGANIZE CODE
+
+Rules of Module Filesystems
+
+- If a module named foo has no submodules,you should put the declarations for foo in a file named foo.rs
+- If a module named foo does have submodules,you should put the declarations for foo in a file named foo/mod.rs
+
+Privacy Rules
+
+- If an item is public,it can be accessed through any of its parent modules
+- If an item is private,it can be accessed only by its immediate parent module and any of the parent's child modules.
+
+# COMMON COLLECTIONS
+> Rust's standard library includes a number of very useful data structures called collections.
+
+Most other data types represent one specific value,but collections can contain multiple values.
+
+- A vector allows you to store a variable number of values next to each other.
+- A string is a collection of characters.
+- A hash map allows you to associate a value with a particular key.
