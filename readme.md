@@ -114,3 +114,16 @@ Most other data types represent one specific value,but collections can contain m
 - A vector allows you to store a variable number of values next to each other.
 - A string is a collection of characters.
 - A hash map allows you to associate a value with a particular key.
+
+# ERROR HANDLING
+> Rust's commitment to reliability extends to error handling.
+
+Recoverable Errors with Result
+> Most errors aren't serious enough to require the program to stop entirely.
+
+    enum Result<T, E> {
+        Ok(T),
+        Err(E),
+    }
+    
+ The T and E are generic type parameters
